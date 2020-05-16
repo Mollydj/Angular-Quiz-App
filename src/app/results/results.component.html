@@ -1,0 +1,15 @@
+<div class="results">
+  <h2 class="Title" style="text-align: center;">Results</h2>
+  <h3 class="Title" style="text-align: center;"> {{correctAnswers.length/answers.values.length * 100}}%</h3>
+  <div class="answer" *ngFor="let a of answers.values;  let i = index;" [ngClass]="{correct: a.correct}">
+
+    Question {{i+1}}: <br>
+    {{a.value}}
+    {{a.correct}}<br><br>
+
+  </div>
+
+  <div style=" text-align: center;">
+    <a mat-raised-button routerLink="/welcome" color="primary">Choose another quiz</a>
+  </div>
+</div>

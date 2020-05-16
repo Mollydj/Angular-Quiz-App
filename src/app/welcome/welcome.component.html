@@ -1,0 +1,12 @@
+<h1 style="text-align: center;" class="Title">Quizzes</h1>
+
+
+<div *ngFor="let q of quiz">
+  <mat-card style="text-align: center;" class="Quiz-Options">
+    <mat-card-title class="Title"> {{q.label}} </mat-card-title>
+    <mat-card-subtitle>{{q.description}}</mat-card-subtitle>
+    <mat-card-actions>
+      <a mat-raised-button routerLink="/{{q.name}}" color="primary">Select This Quiz</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
